@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1D2A2E">
+<title>Edinburgh Castle tour</title>
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="castle.css">
+</head>
+<body class="castle">
+<header class="top">
+  <p class="back"><a href="index.html#sat">Back to the itinerary</a></p>
+  <h1>Edinburgh Castle</h1>
+  <p class="dates">Self-guided audio tour, Sat 14 Nov, entry 12:30</p>
+  <div class="next plan">
+    <p class="nexttext"><b>13:00</b> One O'Clock Gun. Be at stop 6 by 12:55.</p>
+    <p class="nexttext"><b>15:15</b> Walk out for Calton Hill and the sunset.</p>
+  </div>
+</header>
+
+<main>
+<section class="tourmap">
+  <div class="map tall" id="tourmap" role="img" aria-label="Map of the castle with numbered tour stops"></div>
+  <div class="routes">
+    <button class="btn" type="button" id="locate">Find my stop</button>
+    <a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=Edinburgh%20Castle" target="_blank" rel="noopener">Open in Google Maps</a>
+  </div>
+  <p class="mapnote" id="locnote">Find my stop uses your phone's location. It stays on your phone.</p>
+</section>
+
+<section class="plain listenhelp" id="listen">
+  <h2>How to listen</h2>
+  <p>Use the player at the bottom of the screen. It reads each stop aloud with the voice already on your phone, and the map follows along. Headphones are a good idea in the busy rooms.</p>
+  <details>
+    <summary>Voice and speed</summary>
+    <div class="settings">
+      <label>Voice <select id="voice"></select></label>
+      <label>Speed <select id="rate">
+        <option value="0.85">Slower</option><option value="1" selected>Normal</option>
+        <option value="1.15">Faster</option><option value="1.3">Fastest</option></select></label>
+      <label class="chk"><input type="checkbox" id="auto"> Carry on to the next stop automatically</label>
+    </div>
+  </details>
+  <details>
+    <summary>Use another text to speech app</summary>
+    <div class="settings">
+      <p>If the built-in player does not work on your phone, any of these will read the page or the script aloud.</p>
+      <ul class="flat">
+        <li><b>iPhone.</b> Settings, Accessibility, Spoken Content, switch on Speak Screen. Then swipe down with two fingers from the top of the screen on this page.</li>
+        <li><b>Android.</b> Settings, Accessibility, Select to Speak. Then tap the Select to Speak button and tap a stop.</li>
+        <li><b>Edge (phone or computer).</b> Open this page in Microsoft Edge and use Read Aloud from the menu.</li>
+        <li><b>Any other app.</b> Copy the script below and paste it into NaturalReader, Speechify or a similar app.</li>
+      </ul>
+      <div class="routes">
+        <button class="btn" type="button" id="copy">Copy the full script</button>
+        <a class="btn alt" href="castle-tour.txt" download>Download the script</a>
+      </div>
+      <p class="fine" id="copynote"></p>
+    </div>
+  </details>
+  <p class="fine" id="nosupport" hidden>This browser has no built-in speech. Use one of the options under "Use another text to speech app".</p>
+</section>
+
+<section class="stops" id="stops">
+<article class="stop" id="s0" data-i="0">
+  <header><p class="when">12:15</p><h3>Before you go in</h3></header>
+  <div class="say"><p>Welcome to Edinburgh Castle. You are on the Esplanade, the wide open space in front of the gate, and you are about to climb a volcanic rock that people have lived on since the late Bronze Age.</p><p>Your ticket is for twelve thirty, so use these fifteen minutes to look around. Behind you the Royal Mile runs downhill towards Holyrood. In front of you is the gatehouse.</p><p>The plan for the next two and a half hours is a loop. Be at the One O&#x27;Clock Gun by five to one, and be walking out by about a quarter past three, so you reach Calton Hill before sunset. Tap Next each time you reach a stop, or tap Find my stop and the page will pick the closest one.</p></div>
+  <button class="btn listen" type="button" data-i="0">Listen to this stop</button>
+</article><article class="stop" id="s1" data-i="1">
+  <header><p class="when">12:30</p><h3><span class="pin">1</span>Gatehouse and drawbridge</h3></header>
+  <div class="say"><p>This is the gatehouse. Two statues guard the gate, Robert the Bruce on one side and William Wallace on the other. Have your tickets ready, then cross the drawbridge.</p><p>From here on, every gate is narrower and steeper than the last. That is exactly the point. This place was built to be defended.</p></div>
+  <button class="btn listen" type="button" data-i="1">Listen to this stop</button>
+</article><article class="stop" id="s2" data-i="2">
+  <header><p class="when">12:38</p><h3><span class="pin">2</span>Portcullis Gate and Argyle Tower</h3></header>
+  <div class="say"><p>Ahead is the Portcullis Gate, the grand entrance to the upper castle, with the Argyle Tower above it.</p><p>The exhibition in the tower is called Fight for the Castle. It sits directly above the gateway that was the focus of a daring attack at the end of the siege of thirteen forty one.</p><p>That was one of many sieges. During the Wars of Independence the castle changed hands many times. In thirteen fourteen the Scots retook it in a night raid led by Thomas Randolph, the nephew of Robert the Bruce.</p><p>If you want a quick look inside, do it now. Otherwise walk through the gate and keep climbing.</p></div>
+  <button class="btn listen" type="button" data-i="2">Listen to this stop</button>
+</article><article class="stop" id="s3" data-i="3">
+  <header><p class="when">12:45</p><h3><span class="pin">3</span>The Lang Stairs</h3></header>
+  <div class="say"><p>Now you have a choice. The Lang Stairs are the most direct route to the summit of the Castle Rock, and they once formed the original entrance to the castle. There are seventy steps. Count them.</p><p>The gentler cobbled road that winds around the hill was made in the sixteen hundreds, for moving heavy guns. Either way, you are heading for the top of the rock.</p></div>
+  <button class="btn listen" type="button" data-i="3">Listen to this stop</button>
+</article><article class="stop" id="s4" data-i="4">
+  <header><p class="when">12:50</p><h3><span class="pin">4</span>Mons Meg</h3></header>
+  <div class="say"><p>At the top you meet Mons Meg, a siege gun that weighs about six tonnes. She was made in Mons, in what is now Belgium, in fourteen forty nine, and sent to King James the Second of Scotland in fourteen fifty seven.</p><p>Stand in front of the barrel and imagine what it could do to a wall.</p></div>
+  <button class="btn listen" type="button" data-i="4">Listen to this stop</button>
+</article><article class="stop" id="s5" data-i="5">
+  <header><p class="when">12:53</p><h3><span class="pin">5</span>St Margaret&#x27;s Chapel</h3></header>
+  <div class="say"><p>Right beside Mons Meg is St Margaret&#x27;s Chapel, the oldest building in Edinburgh.</p><p>King David the First had this tiny chapel built around eleven thirty, in memory of his mother. For a time it was the only part of the castle left standing.</p><p>The outside is plain. Inside, look for the ornate original arches and the stained glass windows from the nineteen twenties. It is small, so a minute or two is enough.</p></div>
+  <button class="btn listen" type="button" data-i="5">Listen to this stop</button>
+</article><article class="stop" id="s6" data-i="6">
+  <header><p class="when">12:58</p><h3><span class="pin">6</span>The One O&#x27;Clock Gun</h3></header>
+  <div class="say"><p>Now to the north west corner, Mills Mount Battery, for the One O&#x27;Clock Gun. It fires at one o&#x27;clock every day except Sundays, Good Friday and Christmas Day, so today you will hear it. Find a spot with a view of the gun and wait.</p><p>It is a one hundred and five millimetre field gun, and it has been fired since eighteen sixty one as a time signal for ships in the Firth of Forth. The bang takes about ten seconds to reach Leith, and longer to reach ships out at sea.</p><p>It was meant to back up a visual signal, a time ball on the Nelson Monument on Calton Hill, which was installed in eighteen fifty two. That is where you will be at sunset.</p><p>Cover your ears if you are standing close. It is louder than you expect.</p></div>
+  <button class="btn listen" type="button" data-i="6">Listen to this stop</button>
+</article><article class="stop" id="s7" data-i="7">
+  <header><p class="when">13:05</p><h3><span class="pin">7</span>Argyle Battery and the view</h3></header>
+  <div class="say"><p>Right beside the gun is the Argyle Battery. It is a six gun battery built in the seventeen thirties, and the cannons in place today date from about eighteen ten, the time of the Napoleonic Wars. Its open outlook to the north made it a good place to defend the castle.</p><p>Today it is a very good place to look. You can see the New Town laid out in front of you, Leith, the Firth of Forth, and Fife on the far shore.</p></div>
+  <button class="btn listen" type="button" data-i="7">Listen to this stop</button>
+</article><article class="stop" id="s8" data-i="8">
+  <header><p class="when">13:15</p><h3><span class="pin">8</span>The Dog Cemetery</h3></header>
+  <div class="say"><p>Close by is a small and unexpectedly touching place, the Dog Cemetery. Dogs have been buried here since the eighteen forties, among them Dobbler and Winkle.</p><p>Some of them were regimental mascots. Others were the pets of army officers, or even of the castle governor. Take a minute.</p></div>
+  <button class="btn listen" type="button" data-i="8">Listen to this stop</button>
+</article><article class="stop" id="s9" data-i="9">
+  <header><p class="when">13:30</p><h3><span class="pin">9</span>Crown Square and the National War Memorial</h3></header>
+  <div class="say"><p>Now into the heart of the castle, Crown Square. King James the Fourth finished this courtyard in the early fifteen hundreds, enclosed on all four sides by royal buildings.</p><p>On the north side is the Scottish National War Memorial, in what was once a barracks block. Robert Lorimer designed it, and it opened in nineteen twenty seven. Its Rolls of Honour carry the names of Scots servicemen, servicewomen and civilians who died in wars since nineteen fourteen.</p><p>It is a quiet place. Go in, even if only for a few minutes.</p></div>
+  <button class="btn listen" type="button" data-i="9">Listen to this stop</button>
+</article><article class="stop" id="s10" data-i="10">
+  <header><p class="when">13:50</p><h3><span class="pin">10</span>Crown Room and the royal birthing room</h3></header>
+  <div class="say"><p>The Royal Palace is on the east side of Crown Square. Two things to see inside.</p><p>First, the Crown Room, home of the Honours of Scotland. That is the Crown, the Sceptre, the Sword of State, and the Belt and Scabbard. During the Second World War they were hidden deep in the ruins of David&#x27;s Tower, which you will visit shortly.</p><p>Second, the tiny Royal Birthing Room. It was here, on the nineteenth of June fifteen sixty six, that Mary, Queen of Scots gave birth to her son, the future James the Sixth of Scotland, who later also became James the First of England.</p><p>One thing you will not see: the Stone of Destiny used to be displayed beside the Honours, but it moved to Perth Museum in twenty twenty four.</p></div>
+  <button class="btn listen" type="button" data-i="10">Listen to this stop</button>
+</article><article class="stop" id="s11" data-i="11">
+  <header><p class="when">14:20</p><h3><span class="pin">11</span>The Great Hall</h3></header>
+  <div class="say"><p>The Great Hall is on the south side of the square. King James the Fourth built it between fifteen oh nine and fifteen eleven for banquets and state occasions, probably timed with his marriage to Margaret Tudor.</p><p>Look up. The hammerbeam roof is original. Scientific analysis has shown that the oak was felled in Norway around fifteen ten and shipped to Edinburgh. It is one of only two surviving late medieval roofs in Scotland.</p><p>Carved stone corbels hold up the main beams, and the walls are hung with weapons and armour.</p></div>
+  <button class="btn listen" type="button" data-i="11">Listen to this stop</button>
+</article><article class="stop" id="s12" data-i="12">
+  <header><p class="when">14:40</p><h3><span class="pin">12</span>Half Moon Battery and David&#x27;s Tower</h3></header>
+  <div class="say"><p>Head out to the Half Moon Battery on the east side. Beneath it lie the remains of David&#x27;s Tower, which was the heart of the castle in the late thirteen hundreds.</p><p>King David the Second died before his enormous tower was finished, but it was the royal residence for nearly a hundred years. It was destroyed in the Lang Siege of the fifteen seventies. This is where the Honours of Scotland were hidden in the Second World War.</p><p>Look east from the battery. The big hill beyond the Old Town is Arthur&#x27;s Seat, where you were this morning.</p></div>
+  <button class="btn listen" type="button" data-i="12">Listen to this stop</button>
+</article><article class="stop" id="s13" data-i="13">
+  <header><p class="when">14:55</p><h3><span class="pin">13</span>The Prisons of War</h3></header>
+  <div class="say"><p>Your last stop is the Prisons of War, recreated vaults where prisoners captured in wars were held. It is dark inside, and you will hear audio recordings of people&#x27;s voices, so give it a little patience.</p><p>Look for the fireplace in the French prisoners&#x27; vault, and the chained prison doors.</p></div>
+  <button class="btn listen" type="button" data-i="13">Listen to this stop</button>
+</article><article class="stop" id="s14" data-i="14">
+  <header><p class="when">15:15</p><h3>Leaving, and on to Calton Hill</h3></header>
+  <div class="say"><p>That is the castle. If it is about a quarter past three, start walking out now.</p><p>Calton Hill is about twenty five minutes away on foot, down the Royal Mile and along Princes Street. Sunset is about four o&#x27;clock. When you get to the top, look for the tall tower, the Nelson Monument. That is where the time ball that the One O&#x27;Clock Gun backs up still drops at one o&#x27;clock every day.</p><p>Enjoy the evening.</p></div>
+  <button class="btn listen" type="button" data-i="14">Listen to this stop</button>
+</article>
+</section>
+
+<section class="plain">
+  <h2>Sources</h2>
+  <ul class="flat">
+    <li><a href="https://www.edinburghcastle.scot/plan-your-visit/opening-times" target="_blank" rel="noopener">Edinburgh Castle: opening times, One O&#x27;Clock Gun</a></li>
+    <li><a href="https://www.edinburghcastle.scot/see-and-do/tours-guides-and-itineraries/" target="_blank" rel="noopener">Edinburgh Castle: itineraries (Portcullis Gate, Lang Stairs, Mons Meg, St Margaret&#x27;s Chapel, Dog Cemetery)</a></li>
+    <li><a href="https://blog.edinburghcastle.scot/the-origins-of-the-one-oclock-gun/" target="_blank" rel="noopener">Edinburgh Castle: the One O&#x27;Clock Gun</a></li>
+    <li><a href="https://blog.edinburghcastle.scot/welcome-back/" target="_blank" rel="noopener">Edinburgh Castle: Great Hall and hammerbeam roof</a></li>
+    <li><a href="https://blog.edinburghcastle.scot/edinburgh-castle-mary-queen-scots/" target="_blank" rel="noopener">Edinburgh Castle: Mary, Queen of Scots and the birthing room</a></li>
+    <li><a href="https://portal.historicenvironment.scot/apex/f?p=1505%3A300%3A%3A%3A%3A%3AVIEWTYPE%2CVIEWREF%3Adesignation%2CSM90130" target="_blank" rel="noopener">Historic Environment Scotland: Edinburgh Castle scheduled monument record</a></li>
+    <li><a href="https://historicenvironment.scot/archives-and-research/archives-and-collections/properties-in-care-collections/object/the-stone-of-destiny-13th-century-medieval-edinburgh-castle-6132" target="_blank" rel="noopener">Historic Environment Scotland: the Stone of Destiny, now in Perth Museum</a></li>
+    <li><a href="https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/59440656-7a7d-45d9-82ba-afd900e787aa" target="_blank" rel="noopener">Historic Environment Scotland: Scottish National War Memorial</a></li>
+  </ul>
+  <p class="fine">Also the Wikipedia entry on the Scottish National War Memorial. The route order is my suggestion for a 2.5 hour visit, not the castle's own. Check opening hours on the castle site, and expect the order to shift if a room is closed. Stop locations are approximate, from OpenStreetMap.</p>
+</section>
+</main>
+
+<div class="player" id="player" role="region" aria-label="Tour player">
+  <p class="now" id="now" aria-live="polite">Stop 0 of 14</p>
+  <div class="ctl">
+    <button type="button" id="prev" aria-label="Previous stop">Prev</button>
+    <button type="button" id="play" class="main">Play</button>
+    <button type="button" id="next" aria-label="Next stop">Next</button>
+  </div>
+</div>
+
+<script type="application/json" id="data">{"stops": [{"i": 0, "n": 0, "id": "s0", "title": "Before you go in", "pin": null}, {"i": 1, "n": 1, "id": "s1", "title": "Gatehouse and drawbridge", "pin": [55.94852, -3.19867]}, {"i": 2, "n": 2, "id": "s2", "title": "Portcullis Gate and Argyle Tower", "pin": [55.94886, -3.19974]}, {"i": 3, "n": 3, "id": "s3", "title": "The Lang Stairs", "pin": [55.94884, -3.19988]}, {"i": 4, "n": 4, "id": "s4", "title": "Mons Meg", "pin": [55.94879, -3.20016]}, {"i": 5, "n": 5, "id": "s5", "title": "St Margaret's Chapel", "pin": [55.9487, -3.2001]}, {"i": 6, "n": 6, "id": "s6", "title": "The One O'Clock Gun", "pin": [55.94906, -3.2006]}, {"i": 7, "n": 7, "id": "s7", "title": "Argyle Battery and the view", "pin": [55.94905, -3.2004]}, {"i": 8, "n": 8, "id": "s8", "title": "The Dog Cemetery", "pin": [55.94888, -3.20003]}, {"i": 9, "n": 9, "id": "s9", "title": "Crown Square and the National War Memorial", "pin": [55.9484, -3.19974]}, {"i": 10, "n": 10, "id": "s10", "title": "Crown Room and the royal birthing room", "pin": [55.94818, -3.19935]}, {"i": 11, "n": 11, "id": "s11", "title": "The Great Hall", "pin": [55.948, -3.19971]}, {"i": 12, "n": 12, "id": "s12", "title": "Half Moon Battery and David's Tower", "pin": [55.94837, -3.19906]}, {"i": 13, "n": 13, "id": "s13", "title": "The Prisons of War", "pin": [55.94812, -3.20015]}, {"i": 14, "n": 14, "id": "s14", "title": "Leaving, and on to Calton Hill", "pin": null}]}</script>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="castle.js"></script>
+</body>
+</html>

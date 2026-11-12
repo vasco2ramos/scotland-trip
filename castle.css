@@ -1,0 +1,36 @@
+body.castle{padding-bottom:6.5rem}
+.back{margin-bottom:.6rem;font-size:.95rem}
+.plan{margin-top:1rem}
+.plan .nexttext{font-size:1.1rem;margin-top:0}
+.plan .nexttext+.nexttext{margin-top:.5rem}
+.plan b{font:700 1.7rem/1 var(--display);color:var(--gorse);margin-right:.5rem}
+.tourmap{padding-top:.2rem}
+.map.tall{height:22rem}
+.btn{border:0;cursor:pointer;font-family:var(--body)}
+.btn.alt{background:var(--paper);color:var(--heather);border:2px solid var(--heather)}
+.lpin.cur{background:var(--gorse);color:var(--peat);transform:scale(1.25)}
+.lpin.you{background:#1A73E8;width:16px;height:16px;border-radius:50%;box-shadow:0 0 0 6px rgba(26,115,232,.25)}
+.listenhelp details{margin-top:.7rem;border-top:1px solid var(--rule);padding-top:.5rem}
+.listenhelp summary{min-height:44px;display:flex;align-items:center;font-weight:700;cursor:pointer}
+.settings{display:grid;gap:.8rem;padding:.3rem 0 .8rem}
+.settings label{display:grid;gap:.25rem;font-weight:700;font-size:.95rem}
+.settings select{min-height:44px;font:400 1rem var(--body);padding:.3rem .5rem;border:1px solid var(--rule);border-radius:4px;background:#fff;color:var(--peat);max-width:100%}
+.settings label.chk{display:flex;gap:.6rem;align-items:center;min-height:44px}
+.settings input{width:1.3rem;height:1.3rem;accent-color:var(--heather)}
+.stops{margin-top:.6rem;border-top:4px solid var(--peat)}
+.stop{padding:1.3rem 0 1.2rem 1rem;border-bottom:1px solid var(--rule);border-left:6px solid transparent;margin-left:-1rem;scroll-margin-top:1rem}
+.stop.cur{border-left-color:var(--gorse);background:var(--paper)}
+.stop header{display:flex;gap:.9rem;align-items:baseline}
+.stop .when{font:700 1.7rem/1 var(--display);flex:0 0 3.8rem}
+.stop h3{font:700 1.2rem/1.3 var(--body)}
+.stop .say p{margin-top:.6rem}
+.stop .say{max-width:36rem}
+.stop .listen{margin-top:.9rem}
+.player{position:fixed;left:0;right:0;bottom:0;z-index:900;background:var(--peat);color:#EAF0F0;padding:.6rem 1rem calc(.6rem + env(safe-area-inset-bottom));border-top:4px solid var(--gorse)}
+.player .now{max-width:40rem;margin:0 auto .45rem;font-size:.98rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ctl{max-width:40rem;margin:0 auto;display:grid;grid-template-columns:1fr 2fr 1fr;gap:.6rem}
+.ctl button{min-height:48px;border:2px solid #5B6E73;background:transparent;color:#EAF0F0;font:700 1.05rem var(--body);border-radius:6px;cursor:pointer}
+.ctl button.main{background:var(--gorse);border-color:var(--gorse);color:var(--peat)}
+.ctl button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.ctl button:disabled{opacity:.4}
+@media (min-width:40rem){.map.tall{height:26rem}}

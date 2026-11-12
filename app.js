@@ -100,7 +100,7 @@
     m.pins.forEach(function (p) {
       var icon = L.divIcon({ className: "", html: '<div class="lpin">' + p.n + "</div>", iconSize: [26, 26], iconAnchor: [13, 13] });
       L.marker([p.lat, p.lng], { icon: icon, title: p.name, keyboard: false })
-        .addTo(map).bindPopup("<b>" + p.n + ".</b> " + p.name);
+        .addTo(map).bindPopup("<b>" + p.n + ".</b> " + p.name + (p.href ? '<br><a href="' + p.href + '">Open the guided tour</a>' : ""));
       pts.push([p.lat, p.lng]);
     });
     if (pts.length === 1) { map.setView(pts[0], 15); }

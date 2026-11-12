@@ -108,3 +108,4 @@ footer{padding-block:2rem 3rem;color:var(--slate);font-size:.85rem}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media (min-width:40rem){.map{height:21rem}}
+.btn.tour{margin-top:.2rem}
