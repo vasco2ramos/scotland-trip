@@ -9,8 +9,8 @@
   var cur = 0, playing = false, chunkIdx = 0, chunks = [], token = 0, wake = null;
   var $ = function (id) { return document.getElementById(id); };
   var store = {
-    get: function (k) { try { return localStorage.getItem("castle-" + k); } catch (e) { return null; } },
-    set: function (k, v) { try { localStorage.setItem("castle-" + k, v); } catch (e) {} }
+    get: function (k) { try { return localStorage.getItem("tour-" + k); } catch (e) { return null; } },
+    set: function (k, v) { try { localStorage.setItem("tour-" + k, v); } catch (e) {} }
   };
 
   /* ---------- Map ---------- */
@@ -35,9 +35,8 @@
   /* ---------- Selection ---------- */
   function label(i) {
     var s = stops[i];
-    if (i === 0) return "Before you go in";
     if (!s.pin) return s.title;
-    return "Stop " + s.n + " of 13: " + s.title;
+    return "Stop " + s.n + " of " + data.total + ": " + s.title;
   }
   function select(i, scroll) {
     cur = Math.max(0, Math.min(stops.length - 1, i));
@@ -197,7 +196,7 @@
     navigator.geolocation.getCurrentPosition(function (p) {
       var me = [p.coords.latitude, p.coords.longitude], best = -1, bd = 1e9;
       stops.forEach(function (s) { if (s.pin) { var d = dist(me, s.pin); if (d < bd) { bd = d; best = s.i; } } });
-      if (bd > 600) { note.textContent = "You are about " + Math.round(bd) + " m from the castle. Pick a stop from the list."; return; }
+      if (bd > 600) { note.textContent = "You are about " + Math.round(bd) + " m from " + data.where + ". Pick a stop from the list."; return; }
       if (map) {
         if (youMarker) youMarker.setLatLng(me);
         else youMarker = L.marker(me, { icon: L.divIcon({ className: "", html: '<div class="lpin you"></div>', iconSize: [16, 16], iconAnchor: [8, 8] }), interactive: false }).addTo(map);

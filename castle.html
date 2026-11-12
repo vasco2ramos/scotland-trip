@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#1D2A2E">
-<title>Edinburgh Castle tour</title>
+<title>Edinburgh Castle</title>
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="castle.css">
@@ -15,15 +15,12 @@
   <p class="back"><a href="index.html#sat">Back to the itinerary</a></p>
   <h1>Edinburgh Castle</h1>
   <p class="dates">Self-guided audio tour, Sat 14 Nov, entry 12:30</p>
-  <div class="next plan">
-    <p class="nexttext"><b>13:00</b> One O'Clock Gun. Be at stop 6 by 12:55.</p>
-    <p class="nexttext"><b>15:15</b> Walk out for Calton Hill and the sunset.</p>
-  </div>
+  <div class="next plan"><p class="nexttext"><b>13:00</b> One O'Clock Gun. Be at stop 6 by 12:55.</p><p class="nexttext"><b>15:15</b> Walk out for Calton Hill and the sunset.</p></div>
 </header>
 
 <main>
 <section class="tourmap">
-  <div class="map tall" id="tourmap" role="img" aria-label="Map of the castle with numbered tour stops"></div>
+  <div class="map tall" id="tourmap" role="img" aria-label="Map with numbered tour stops"></div>
   <div class="routes">
     <button class="btn" type="button" id="locate">Find my stop</button>
     <a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=Edinburgh%20Castle" target="_blank" rel="noopener">Open in Google Maps</a>
@@ -33,7 +30,7 @@
 
 <section class="plain listenhelp" id="listen">
   <h2>How to listen</h2>
-  <p>Use the player at the bottom of the screen. It reads each stop aloud with the voice already on your phone, and the map follows along. Headphones are a good idea in the busy rooms.</p>
+  <p>Use the player at the bottom of the screen. It reads each stop aloud with the voice already on your phone, and the map follows along. Headphones are a good idea in busy places.</p>
   <details>
     <summary>Voice and speed</summary>
     <div class="settings">
@@ -144,6 +141,11 @@
 </section>
 
 <section class="plain">
+  <h2>Other audio tours</h2>
+  <ul class="flat"><li><a href="westend.html">Dean Village to Stockbridge</a> <span class="fine">Sat 14 Nov, about 09:00 to 11:15</span></li><li><a href="gardens.html">Princes Street Gardens</a> <span class="fine">Sat 14 Nov, about 11:30 to 12:15</span></li><li><a href="oldtown.html">Old Town walk</a> <span class="fine">Fri 13 Nov, about 14:00 to 16:30</span></li><li><a href="evening.html">Scott Monument and St Andrew Square</a> <span class="fine">Sat 14 Nov, about 16:30 to 17:15</span></li></ul>
+</section>
+
+<section class="plain">
   <h2>Sources</h2>
   <ul class="flat">
     <li><a href="https://en.wikipedia.org/wiki/Edinburgh_Castle" target="_blank" rel="noopener">Wikipedia: Edinburgh Castle (geology, sieges, palace, prisons, Lang Siege)</a></li>
@@ -162,12 +164,12 @@
     <li><a href="https://historicenvironment.scot/archives-and-research/archives-and-collections/properties-in-care-collections/object/the-stone-of-destiny-13th-century-medieval-edinburgh-castle-6132" target="_blank" rel="noopener">Historic Environment Scotland: the Stone of Destiny, now in Perth Museum</a></li>
     <li><a href="https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/59440656-7a7d-45d9-82ba-afd900e787aa" target="_blank" rel="noopener">Historic Environment Scotland: Scottish National War Memorial</a></li>
   </ul>
-  <p class="fine">Photos are linked from Wikimedia Commons and carry their own licences. Wikipedia pages disagree on a few dates (Mons Meg's arrival, when her barrel burst), so I've kept those loose. The route order is my suggestion for a 2.5 hour visit, not the castle's own. Check opening hours on the castle site, and expect the order to shift if a room is closed. Stop locations are approximate, from OpenStreetMap.</p>
+  <p class="fine">Photos are linked from Wikimedia Commons and carry their own licences. Wikipedia pages disagree on a few dates (Mons Meg&#x27;s arrival, when her barrel burst), so I&#x27;ve kept those loose. The route order is my suggestion for a 2.5 hour visit, not the castle&#x27;s own. Check opening hours on the castle site, and expect the order to shift if a room is closed. Stop locations are approximate, from OpenStreetMap.</p>
 </section>
 </main>
 
 <div class="player" id="player" role="region" aria-label="Tour player">
-  <p class="now" id="now" aria-live="polite">Stop 0 of 14</p>
+  <p class="now" id="now" aria-live="polite">Ready</p>
   <div class="ctl">
     <button type="button" id="prev" aria-label="Previous stop">Prev</button>
     <button type="button" id="play" class="main">Play</button>
@@ -175,7 +177,7 @@
   </div>
 </div>
 
-<script type="application/json" id="data">{"stops": [{"i": 0, "n": 0, "id": "s0", "title": "Before you go in", "pin": null}, {"i": 1, "n": 1, "id": "s1", "title": "Gatehouse and drawbridge", "pin": [55.94852, -3.19867]}, {"i": 2, "n": 2, "id": "s2", "title": "Portcullis Gate and the Lang Siege", "pin": [55.94886, -3.19974]}, {"i": 3, "n": 3, "id": "s3", "title": "The Lang Stairs", "pin": [55.94884, -3.19988]}, {"i": 4, "n": 4, "id": "s4", "title": "Mons Meg", "pin": [55.94879, -3.20016]}, {"i": 5, "n": 5, "id": "s5", "title": "St Margaret's Chapel", "pin": [55.9487, -3.2001]}, {"i": 6, "n": 6, "id": "s6", "title": "The One O'Clock Gun", "pin": [55.94906, -3.2006]}, {"i": 7, "n": 7, "id": "s7", "title": "Argyle Battery and the view", "pin": [55.94905, -3.2004]}, {"i": 8, "n": 8, "id": "s8", "title": "The Dog Cemetery", "pin": [55.94888, -3.20003]}, {"i": 9, "n": 9, "id": "s9", "title": "Crown Square and the National War Memorial", "pin": [55.9484, -3.19974]}, {"i": 10, "n": 10, "id": "s10", "title": "Crown Room and the royal birth room", "pin": [55.94818, -3.19935]}, {"i": 11, "n": 11, "id": "s11", "title": "The Great Hall", "pin": [55.948, -3.19971]}, {"i": 12, "n": 12, "id": "s12", "title": "Half Moon Battery and David's Tower", "pin": [55.94837, -3.19906]}, {"i": 13, "n": 13, "id": "s13", "title": "The Prisons of War", "pin": [55.94812, -3.20015]}, {"i": 14, "n": 14, "id": "s14", "title": "Leaving, and on to Calton Hill", "pin": null}]}</script>
+<script type="application/json" id="data">{"total": 13, "where": "the castle", "file": "castle", "stops": [{"i": 0, "n": 0, "id": "s0", "title": "Before you go in", "pin": null}, {"i": 1, "n": 1, "id": "s1", "title": "Gatehouse and drawbridge", "pin": [55.94852, -3.19867]}, {"i": 2, "n": 2, "id": "s2", "title": "Portcullis Gate and the Lang Siege", "pin": [55.94886, -3.19974]}, {"i": 3, "n": 3, "id": "s3", "title": "The Lang Stairs", "pin": [55.94884, -3.19988]}, {"i": 4, "n": 4, "id": "s4", "title": "Mons Meg", "pin": [55.94879, -3.20016]}, {"i": 5, "n": 5, "id": "s5", "title": "St Margaret's Chapel", "pin": [55.9487, -3.2001]}, {"i": 6, "n": 6, "id": "s6", "title": "The One O'Clock Gun", "pin": [55.94906, -3.2006]}, {"i": 7, "n": 7, "id": "s7", "title": "Argyle Battery and the view", "pin": [55.94905, -3.2004]}, {"i": 8, "n": 8, "id": "s8", "title": "The Dog Cemetery", "pin": [55.94888, -3.20003]}, {"i": 9, "n": 9, "id": "s9", "title": "Crown Square and the National War Memorial", "pin": [55.9484, -3.19974]}, {"i": 10, "n": 10, "id": "s10", "title": "Crown Room and the royal birth room", "pin": [55.94818, -3.19935]}, {"i": 11, "n": 11, "id": "s11", "title": "The Great Hall", "pin": [55.948, -3.19971]}, {"i": 12, "n": 12, "id": "s12", "title": "Half Moon Battery and David's Tower", "pin": [55.94837, -3.19906]}, {"i": 13, "n": 13, "id": "s13", "title": "The Prisons of War", "pin": [55.94812, -3.20015]}, {"i": 14, "n": 14, "id": "s14", "title": "Leaving, and on to Calton Hill", "pin": null}]}</script>
 <script src="vendor/leaflet/leaflet.js"></script>
 <script src="castle.js"></script>
 </body>

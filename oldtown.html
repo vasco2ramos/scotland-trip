@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1D2A2E">
+<title>Old Town walk</title>
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="castle.css">
+</head>
+<body class="castle">
+<header class="top">
+  <p class="back"><a href="index.html#fri">Back to the itinerary</a></p>
+  <h1>Old Town walk</h1>
+  <p class="dates">Self-guided audio walk, Fri 13 Nov, about 14:00 to 16:30</p>
+  <div class="next plan"><p class="nexttext"><b>14:00</b> Start at the Heart of Midlothian, outside St Giles'.</p><p class="nexttext"><b>15:55</b> Sunset is about 15:55. The Vennel is the viewpoint for it.</p></div>
+</header>
+
+<main>
+<section class="tourmap">
+  <div class="map tall" id="tourmap" role="img" aria-label="Map with numbered tour stops"></div>
+  <div class="routes">
+    <button class="btn" type="button" id="locate">Find my stop</button>
+    <a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=St%20Giles%27%20Cathedral%2C%20Edinburgh" target="_blank" rel="noopener">Open in Google Maps</a>
+  </div>
+  <p class="mapnote" id="locnote">Find my stop uses your phone's location. It stays on your phone.</p>
+</section>
+
+<section class="plain listenhelp" id="listen">
+  <h2>How to listen</h2>
+  <p>Use the player at the bottom of the screen. It reads each stop aloud with the voice already on your phone, and the map follows along. Headphones are a good idea in busy places.</p>
+  <details>
+    <summary>Voice and speed</summary>
+    <div class="settings">
+      <label>Voice <select id="voice"></select></label>
+      <label>Speed <select id="rate">
+        <option value="0.85">Slower</option><option value="1" selected>Normal</option>
+        <option value="1.15">Faster</option><option value="1.3">Fastest</option></select></label>
+      <label class="chk"><input type="checkbox" id="auto"> Carry on to the next stop automatically</label>
+    </div>
+  </details>
+  <details>
+    <summary>Use another text to speech app</summary>
+    <div class="settings">
+      <p>If the built-in player does not work on your phone, any of these will read the page or the script aloud.</p>
+      <ul class="flat">
+        <li><b>iPhone.</b> Settings, Accessibility, Spoken Content, switch on Speak Screen. Then swipe down with two fingers from the top of the screen on this page.</li>
+        <li><b>Android.</b> Settings, Accessibility, Select to Speak. Then tap the Select to Speak button and tap a stop.</li>
+        <li><b>Edge (phone or computer).</b> Open this page in Microsoft Edge and use Read Aloud from the menu.</li>
+        <li><b>Any other app.</b> Copy the script below and paste it into NaturalReader, Speechify or a similar app.</li>
+      </ul>
+      <div class="routes">
+        <button class="btn" type="button" id="copy">Copy the full script</button>
+        <a class="btn alt" href="oldtown-tour.txt" download>Download the script</a>
+      </div>
+      <p class="fine" id="copynote"></p>
+    </div>
+  </details>
+  <p class="fine" id="nosupport" hidden>This browser has no built-in speech. Use one of the options under "Use another text to speech app".</p>
+</section>
+
+<section class="stops" id="stops">
+<article class="stop" id="s0" data-i="0">
+  <header><p class="when">13:55</p><h3>Before you start</h3></header>
+  <button class="btn listen" type="button" data-i="0">Listen to this stop</button>
+  
+  <div class="say"><p>Welcome to the Old Town. Before you go anywhere, a word on why it looks the way it does. The Royal Mile runs along a ridge, and the ridge is the tail of the volcanic rock that carries the castle. A tail of hard rock is narrow, so for centuries the town could only grow upwards. That&#x27;s why the buildings are so tall, and the lanes between them, called closes, are so steep and narrow.</p><p>The plan is a downhill loop. You&#x27;ll start at St Giles&#x27;, go down to the Grassmarket, climb the Vennel for the sunset, and finish at Greyfriars. It gets dark at about four, so the order matters.</p></div>
+</article><article class="stop" id="s1" data-i="1">
+  <header><p class="when">14:00</p><h3><span class="pin">1</span>The Royal Mile and the Heart of Midlothian</h3></header>
+  <button class="btn listen" type="button" data-i="1">Listen to this stop</button>
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Heart_of_Midlothian_and_brass_marker.jpg?width=900" alt="The Heart of Midlothian mosaic" loading="lazy" decoding="async"><figcaption>The Heart of Midlothian mosaic. <a href="https://commons.wikimedia.org/wiki/File:Heart_of_Midlothian_and_brass_marker.jpg" target="_blank" rel="noopener">Wikimedia Commons, Public domain</a></figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Royal_Mile%2C_Edinburgh_-_High_Resoultion.jpg?width=900" alt="The Royal Mile" loading="lazy" decoding="async"><figcaption>The Royal Mile. <a href="https://commons.wikimedia.org/wiki/File:The_Royal_Mile%2C_Edinburgh_-_High_Resoultion.jpg" target="_blank" rel="noopener">Wikimedia Commons, CC BY 3.0</a></figcaption></figure><div class="look"><h4>What to look for</h4><ul><li>The heart shaped mosaic in the setts outside the west door of St Giles&#x27;.</li><li>The Mercat Cross next to the cathedral.</li></ul></div>
+  <div class="say"><p>You&#x27;re standing on the Royal Mile, the main street of the Old Town. It runs between Edinburgh Castle and Holyrood Palace and it&#x27;s almost exactly one mile long. The name is quite modern. It only goes back to the early twentieth century.</p><p>Look down for the heart shaped mosaic made of coloured granite setts, the Heart of Midlothian. It marks the entrance to the Old Tolbooth, which stood here for more than four hundred years. The Tolbooth was the town hall, the meeting place for parliament at times, and the main jail, where punishment and torture were routine. It was pulled down in eighteen seventeen. Sir Walter Scott then wrote a novel about it in eighteen eighteen, The Heart of Midlothian, and the mosaic has marked the spot since eighteen sixty.</p><p>Locals often spit on the heart for good luck. It may have begun as a way of showing contempt for the executions. And the Edinburgh football club Hearts took its name and badge from this mosaic.</p><p>Beside the cathedral is the Mercat Cross, the old market cross, where official proclamations are read. It&#x27;s first mentioned in a charter of thirteen sixty five. The cross you see is Victorian, put together from the old pieces. The original was demolished in seventeen fifty six, and Scott himself rescued some of the carved heads for his garden.</p></div>
+</article><article class="stop" id="s2" data-i="2">
+  <header><p class="when">14:15</p><h3><span class="pin">2</span>St Giles&#x27; Cathedral</h3></header>
+  <button class="btn listen" type="button" data-i="2">Listen to this stop</button>
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Edinburgh_St_Giles_Cathedral_01.JPG?width=900" alt="St Giles&#x27; Cathedral and its crown steeple" loading="lazy" decoding="async"><figcaption>St Giles&#x27; Cathedral and its crown steeple. <a href="https://commons.wikimedia.org/wiki/File:Edinburgh_St_Giles_Cathedral_01.JPG" target="_blank" rel="noopener">Wikimedia Commons, CC BY-SA 3.0</a></figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Thistle_Chapel_West.jpg?width=900" alt="The Thistle Chapel inside St Giles&#x27;" loading="lazy" decoding="async"><figcaption>The Thistle Chapel inside St Giles&#x27;. <a href="https://commons.wikimedia.org/wiki/File:Thistle_Chapel_West.jpg" target="_blank" rel="noopener">Wikimedia Commons, CC BY-SA 4.0</a></figcaption></figure><div class="look"><h4>What to look for</h4><ul><li>The crown steeple above you.</li><li>Inside, the Thistle Chapel, the richly carved chapel of the Order of the Thistle.</li></ul></div>
+  <div class="say"><p>St Giles&#x27; Cathedral is the High Kirk of Edinburgh, and a quick practical note first. As of the fifth of October twenty twenty six, entry is twelve pounds, free for residents of Scotland and under sixteens. It&#x27;s open Saturday nine to five. On Friday, hours are ten to six.</p><p>Look up at the crown steeple. Tree ring dating puts it between fourteen sixty and fourteen sixty seven. It&#x27;s one of only two medieval crown steeples left in Scotland. The design is English in origin, but it became the symbol of the city.</p><p>The church was probably founded in the twelfth century. In fifteen fifty nine it turned Protestant, with John Knox as its minister, the leading figure of the Scottish Reformation. Afterwards the building was divided up and used for several congregations and for secular purposes, even as a prison and as a meeting place for the Parliament of Scotland.</p><p>Two stories to look for. In January fifteen seventy, the Regent Moray, a leading opponent of Mary, Queen of Scots, was buried in the church after his assassination, and Knox preached at the funeral. And on the twenty third of July sixteen thirty seven, the introduction of a Prayer Book provoked a riot. Tradition says it started when a market trader named Jenny Geddes threw her stool at the dean.</p><p>The Thistle Chapel is the jewel. It&#x27;s the chapel of the Order of the Thistle, designed by Robert Lorimer, with a team of leading Scottish arts and crafts artists, after the sons of the Earl of Leven offered money to build it. It&#x27;s compact, so allow time to look.</p></div>
+</article><article class="stop" id="s3" data-i="3">
+  <header><p class="when">15:10</p><h3><span class="pin">3</span>Victoria Street and the West Bow</h3></header>
+  <button class="btn listen" type="button" data-i="3">Listen to this stop</button>
+  <div class="look"><h4>What to look for</h4><ul><li>The curve of the street as it drops to the Grassmarket.</li></ul></div>
+  <div class="say"><p>From the Lawnmarket, head to George IV Bridge and take Victoria Street, the curving street that drops steeply down to the Grassmarket. The lower part of Victoria Street, the West Bow, was once a street of wholesale traders. The writer Daniel Defoe, who was sent to Edinburgh in seventeen oh six as an English government agent, described it as full of considerable dealers in iron, pitch, tar, oil, hemp, flax and heavy goods.</p><p>The Bow was heavily altered in the Victorian period. Look back up the curve from the bottom, and you can see how it climbs back towards the Lawnmarket.</p></div>
+</article><article class="stop" id="s4" data-i="4">
+  <header><p class="when">15:25</p><h3><span class="pin">4</span>The Grassmarket</h3></header>
+  <button class="btn listen" type="button" data-i="4">Listen to this stop</button>
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Edinburgh_Castle_from_Grass_Market.jpg?width=900" alt="Edinburgh Castle from the Grassmarket" loading="lazy" decoding="async"><figcaption>Edinburgh Castle from the Grassmarket. <a href="https://commons.wikimedia.org/wiki/File:Edinburgh_Castle_from_Grass_Market.jpg" target="_blank" rel="noopener">Wikimedia Commons, Public domain</a></figcaption></figure><div class="look"><h4>What to look for</h4><ul><li>The castle rock towering over the south west end of the square.</li><li>The memorial to the Covenanters near the old gallows site.</li></ul></div>
+  <div class="say"><p>The Grassmarket sits in a valley at the south west foot of the castle rock. In thirteen sixty three it&#x27;s mentioned as the street called Newbygging, new buildings, under the castle. From fourteen seventy seven it was one of the main market places of Edinburgh, and part of it was for the sale of horses and cattle. The name probably comes from livestock grazing in pens beyond its western end.</p><p>It also has a darker history. It was the traditional place of execution. A memorial near the gibbet site was made in nineteen thirty seven for more than a hundred Covenanters who died on the gallows between sixteen sixty one and sixteen eighty eight, in a time called the Killing Time. In seventeen thirty six it was the setting for the Porteous Riots, which ended with the lynching of a captain of the Town Guard.</p><p>And there&#x27;s the story of Maggie Dickson, a fishwife from Musselburgh, convicted of concealing a pregnancy and hanged here in August seventeen twenty four. The popular story is that she survived the hanging, and her name is now on a pub.</p><p>From eighteen hundred, many Irish immigrants settled here, in cheap lodging houses. It was also here, at Tanners Close at the west end, that most of the Burke and Hare murders took place in eighteen twenty eight.</p></div>
+</article><article class="stop" id="s5" data-i="5">
+  <header><p class="when">15:45</p><h3><span class="pin">5</span>The Vennel viewpoint</h3></header>
+  <button class="btn listen" type="button" data-i="5">Listen to this stop</button>
+  <div class="look"><h4>What to look for</h4><ul><li>The steps up from the south west corner of the Grassmarket.</li><li>A surviving tower of the old town wall, and a view straight up at the castle.</li></ul></div>
+  <div class="say"><p>In the south west corner, take the Vennel, the narrow lane that climbs from the Grassmarket. On its east side you can still see some of the best surviving parts of the old town walls, the Flodden Wall and the Telfer Wall.</p><p>The Flodden Wall was built after the Scots were beaten at the Battle of Flodden in fifteen thirteen, when the town feared an English attack. It was about one point two metres thick and up to seven metres high. It began at the castle, ran across the west end of the Grassmarket, and then went uphill along the Vennel, and a watch tower survives at this south west corner. It then wrapped around Greyfriars Kirkyard.</p><p>The walls were never very good at defence. They were more a way to control trade, tax goods and deter smugglers. By the mid eighteenth century they had outlived their purpose and sections were pulled down.</p><p>At the top, turn around. The castle rock rises right in front of you, and with the sun going down at about five to four, it should be lit up. That&#x27;s your photograph.</p></div>
+</article><article class="stop" id="s6" data-i="6">
+  <header><p class="when">16:00</p><h3><span class="pin">6</span>Greyfriars Kirkyard and Bobby</h3></header>
+  <button class="btn listen" type="button" data-i="6">Listen to this stop</button>
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Greyfriars_Kirkyard_with_Edinburgh_Castle_behind.jpg?width=900" alt="Greyfriars Kirkyard with the castle behind" loading="lazy" decoding="async"><figcaption>Greyfriars Kirkyard with the castle behind. <a href="https://commons.wikimedia.org/wiki/File:Greyfriars_Kirkyard_with_Edinburgh_Castle_behind.jpg" target="_blank" rel="noopener">Wikimedia Commons, CC BY-SA 4.0</a></figcaption></figure><figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Greyfriars_bobby_collar_%28cropped%29.jpg?width=900" alt="Greyfriars Bobby&#x27;s collar, now in the Museum of Edinburgh" loading="lazy" decoding="async"><figcaption>Greyfriars Bobby&#x27;s collar, now in the Museum of Edinburgh. <a href="https://commons.wikimedia.org/wiki/File:Greyfriars_bobby_collar_%28cropped%29.jpg" target="_blank" rel="noopener">Wikimedia Commons, CC BY-SA 3.0</a></figcaption></figure><div class="look"><h4>What to look for</h4><ul><li>The wall of the kirkyard, which is the line of the Flodden Wall.</li><li>The statue of Bobby at the corner of George IV Bridge and Candlemaker Row.</li></ul></div>
+  <div class="say"><p>Greyfriars Kirkyard is on the southern edge of the Old Town. Burials began here in the late sixteenth century, and the graveyard and its monuments are category A listed. I haven&#x27;t confirmed the gate times, so if the gate is shut at this hour, the view from the street is still worth it.</p><p>It&#x27;s a place where history happened. In sixteen thirty eight the National Covenant was signed in this graveyard, because it was a place of free public assembly. And after the Battle of Bothwell Bridge in sixteen seventy nine, about twelve hundred prisoners were brought to Edinburgh. About four hundred of them were held in a makeshift prison in a field next to this kirkyard, enclosed by the Flodden Wall and the wall of George Heriot&#x27;s School. It became known as the Covenanters&#x27; Prison.</p><p>And then there&#x27;s Bobby. The best known version of the story says that Greyfriars Bobby belonged to John Gray, a night watchman with the Edinburgh City Police. When Gray died, he was buried here, and Bobby reportedly spent the rest of his life sitting on the grave, fourteen years, until he died on the fourteenth of January eighteen seventy two.</p><p>In eighteen sixty seven, the Lord Provost, Sir William Chambers, paid for Bobby&#x27;s licence and gave him a collar, which is now in the Museum of Edinburgh. A year after the dog&#x27;s death, Lady Burdett Coutts paid for the fountain with Bobby&#x27;s statue on top, which stands opposite the entrance. Historians say the accuracy of the story is disputed, but it&#x27;s one of the best loved stories in Edinburgh.</p><p>That&#x27;s the end of the Old Town walk. The National Museum of Scotland is a couple of minutes away if you want it before it closes. Otherwise, it&#x27;s time to find a whisky bar.</p></div>
+</article>
+</section>
+
+<section class="plain">
+  <h2>Other audio tours</h2>
+  <ul class="flat"><li><a href="castle.html">Edinburgh Castle</a> <span class="fine">Sat 14 Nov, entry 12:30</span></li><li><a href="westend.html">Dean Village to Stockbridge</a> <span class="fine">Sat 14 Nov, about 09:00 to 11:15</span></li><li><a href="gardens.html">Princes Street Gardens</a> <span class="fine">Sat 14 Nov, about 11:30 to 12:15</span></li><li><a href="evening.html">Scott Monument and St Andrew Square</a> <span class="fine">Sat 14 Nov, about 16:30 to 17:15</span></li></ul>
+</section>
+
+<section class="plain">
+  <h2>Sources</h2>
+  <ul class="flat">
+    <li><a href="https://en.wikipedia.org/wiki/Royal_Mile" target="_blank" rel="noopener">Wikipedia: Royal Mile</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Heart_of_Midlothian_(Royal_Mile)" target="_blank" rel="noopener">Wikipedia: Heart of Midlothian (Royal Mile)</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Old_Tolbooth,_Edinburgh" target="_blank" rel="noopener">Wikipedia: Old Tolbooth, Edinburgh</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Mercat_Cross,_Edinburgh" target="_blank" rel="noopener">Wikipedia: Mercat Cross, Edinburgh</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/St_Giles%27_Cathedral" target="_blank" rel="noopener">Wikipedia: St Giles&#x27; Cathedral</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Thistle_Chapel" target="_blank" rel="noopener">Wikipedia: Thistle Chapel</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Grassmarket" target="_blank" rel="noopener">Wikipedia: Grassmarket</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Edinburgh_town_walls" target="_blank" rel="noopener">Wikipedia: Edinburgh town walls (Flodden and Telfer Walls)</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Greyfriars_Kirkyard" target="_blank" rel="noopener">Wikipedia: Greyfriars Kirkyard</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Greyfriars_Bobby" target="_blank" rel="noopener">Wikipedia: Greyfriars Bobby</a></li>
+    <li><a href="https://www.stgilescathedral.org.uk/visitor-information" target="_blank" rel="noopener">St Giles&#x27; Cathedral: visitor information and opening hours</a></li>
+    <li><a href="https://www.edinburghnews.scotsman.com/news/st-giles-cathedral-entry-fee-visitors-9268490" target="_blank" rel="noopener">The Scotsman: St Giles&#x27; £12 charge from 5 October 2026</a></li>
+  </ul>
+  <p class="fine">I have not confirmed Greyfriars Kirkyard&#x27;s closing time, so check the gate. Walking times are my estimates.</p>
+</section>
+</main>
+
+<div class="player" id="player" role="region" aria-label="Tour player">
+  <p class="now" id="now" aria-live="polite">Ready</p>
+  <div class="ctl">
+    <button type="button" id="prev" aria-label="Previous stop">Prev</button>
+    <button type="button" id="play" class="main">Play</button>
+    <button type="button" id="next" aria-label="Next stop">Next</button>
+  </div>
+</div>
+
+<script type="application/json" id="data">{"total": 6, "where": "the Old Town", "file": "oldtown", "stops": [{"i": 0, "n": 0, "id": "s0", "title": "Before you start", "pin": null}, {"i": 1, "n": 1, "id": "s1", "title": "The Royal Mile and the Heart of Midlothian", "pin": [55.9495, -3.1906]}, {"i": 2, "n": 2, "id": "s2", "title": "St Giles' Cathedral", "pin": [55.9494, -3.1908]}, {"i": 3, "n": 3, "id": "s3", "title": "Victoria Street and the West Bow", "pin": [55.9487, -3.193]}, {"i": 4, "n": 4, "id": "s4", "title": "The Grassmarket", "pin": [55.9475, -3.1961]}, {"i": 5, "n": 5, "id": "s5", "title": "The Vennel viewpoint", "pin": [55.9469, -3.1972]}, {"i": 6, "n": 6, "id": "s6", "title": "Greyfriars Kirkyard and Bobby", "pin": [55.9467, -3.1922]}]}</script>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="castle.js"></script>
+</body>
+</html>
