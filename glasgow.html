@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1D2A2E">
+<title>Glasgow city walk</title>
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="castle.css">
+</head>
+<body class="castle">
+<header class="top">
+  <p class="back"><a href="index.html#mon">Back to the itinerary</a></p>
+  <h1>Glasgow city walk</h1>
+  <p class="dates">Self-guided audio walk, Mon 16 Nov, about 11:00 to 15:30</p>
+  <div class="next plan"><p class="nexttext"><b>11:00</b> The Lighthouse on Mitchell Lane, five minutes from the hotel.</p><p class="nexttext"><b>13:45</b> Glasgow Cathedral, then the Necropolis. Last cathedral entry is around 15:00.</p></div>
+</header>
+
+<main>
+<section class="tourmap">
+  <div class="map tall" id="tourmap" role="img" aria-label="Map with numbered tour stops"></div>
+  <div class="routes">
+    <button class="btn" type="button" id="locate">Find my stop</button>
+    <a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Lighthouse%2C%20Mitchell%20Lane%2C%20Glasgow" target="_blank" rel="noopener">Open in Google Maps</a>
+  </div>
+  <p class="mapnote" id="locnote">Find my stop uses your phone's location. It stays on your phone.</p>
+</section>
+
+<section class="plain listenhelp" id="listen">
+  <h2>How to listen</h2>
+  <p>Use the player at the bottom of the screen. It reads each stop aloud with the voice already on your phone, and the map follows along. Headphones are a good idea in busy places.</p>
+  <details>
+    <summary>Voice and speed</summary>
+    <div class="settings">
+      <label>Voice <select id="voice"></select></label>
+      <label>Speed <select id="rate">
+        <option value="0.85">Slower</option><option value="1" selected>Normal</option>
+        <option value="1.15">Faster</option><option value="1.3">Fastest</option></select></label>
+      <label class="chk"><input type="checkbox" id="auto"> Carry on to the next stop automatically</label>
+    </div>
+  </details>
+  <details>
+    <summary>Use another text to speech app</summary>
+    <div class="settings">
+      <p>If the built-in player does not work on your phone, any of these will read the page or the script aloud.</p>
+      <ul class="flat">
+        <li><b>iPhone.</b> Settings, Accessibility, Spoken Content, switch on Speak Screen. Then swipe down with two fingers from the top of the screen on this page.</li>
+        <li><b>Android.</b> Settings, Accessibility, Select to Speak. Then tap the Select to Speak button and tap a stop.</li>
+        <li><b>Edge (phone or computer).</b> Open this page in Microsoft Edge and use Read Aloud from the menu.</li>
+        <li><b>Any other app.</b> Copy the script below and paste it into NaturalReader, Speechify or a similar app.</li>
+      </ul>
+      <div class="routes">
+        <button class="btn" type="button" id="copy">Copy the full script</button>
+        <a class="btn alt" href="glasgow-tour.txt" download>Download the script</a>
+      </div>
+      <p class="fine" id="copynote"></p>
+    </div>
+  </details>
+  <p class="fine" id="nosupport" hidden>This browser has no built-in speech. Use one of the options under "Use another text to speech app".</p>
+</section>
+
+<section class="stops" id="stops">
+<article class="stop" id="s0" data-i="0">
+  <header><p class="when">10:55</p><h3>Before you start</h3></header>
+  <button class="btn listen" type="button" data-i="0">Listen to this stop</button>
+  
+  <div class="say"><p>Glasgow isn&#x27;t Edinburgh, and that&#x27;s the fun of it. Edinburgh is a medieval ridge and a Georgian New Town. Glasgow is a Victorian trading city that grew rich on the Clyde, first on tobacco, then on shipbuilding and heavy industry. The buildings are big, confident and a bit showy, and the people are famously friendly.</p><p>Today&#x27;s route is a loop from your hotel. You&#x27;ll start with Mackintosh at the Lighthouse, pass the most famous traffic cone in Britain, cross George Square, stop for lunch in the Merchant City, then go up to the cathedral and the Necropolis in the best of the afternoon light.</p><p>The sun sets at about four, so the hill at the end is timed for the last good light. Wear shoes with grip. The Necropolis paths are steep.</p></div>
+</article><article class="stop" id="s1" data-i="1">
+  <header><p class="when">11:00</p><h3><span class="pin">1</span>The Lighthouse</h3></header>
+  <button class="btn listen" type="button" data-i="1">Listen to this stop</button>
+  <div class="look"><h4>What to look for</h4><ul><li>The Mackintosh tower, with the helical staircase inside.</li><li>The Mackintosh Interpretation Centre on level three.</li><li>The view from the top. The lift goes to the level six viewing platform.</li></ul></div>
+  <div class="say"><p>You&#x27;re at the Lighthouse, on Mitchell Lane. It was the first public commission completed by Charles Rennie Mackintosh. He designed it in eighteen ninety five as the headquarters of the Glasgow Herald newspaper, and he was still in his twenties.</p><p>Mackintosh, who lived from eighteen sixty eight to nineteen twenty eight, is the architect and designer most closely tied to Glasgow. If you only see one of his buildings today, make it this one. The tower is his, and the staircase winds up inside it.</p><p>Entry is free. It opens at ten thirty on Mondays and closes at five. Inside, the Mackintosh Interpretation Centre on level three covers his life and work. You can climb the one hundred and thirty six steps of the tower, or take the lift to the viewing platform on level six. Give it about forty five minutes.</p><p>At the top, look out over the roofs. You&#x27;ll see the grid of the city centre, and if the air is clear, the hill of the Necropolis in the distance to the east. That&#x27;s where you&#x27;re heading this afternoon.</p></div>
+</article><article class="stop" id="s2" data-i="2">
+  <header><p class="when">11:45</p><h3><span class="pin">2</span>Gallery of Modern Art and the Duke of Wellington</h3></header>
+  <button class="btn listen" type="button" data-i="2">Listen to this stop</button>
+  <div class="look"><h4>What to look for</h4><ul><li>The cone on the Duke&#x27;s head.</li><li>The columned front of the old townhouse behind him.</li></ul></div>
+  <div class="say"><p>A few minutes away you&#x27;ll find Royal Exchange Square, and the Gallery of Modern Art. You don&#x27;t need to go in, though it&#x27;s free and open from ten on Mondays. What you came for is outside.</p><p>In front of the gallery stands an equestrian statue of the Duke of Wellington, made by the sculptor Carlo Marochetti and put up in eighteen forty four. For years now, the Duke has worn a traffic cone on his head. The council has tried to stop it, and the cone keeps coming back. It has been painted gold to celebrate big sporting wins, and it has become an unofficial symbol of the city&#x27;s humour.</p><p>The building behind him began as a townhouse in the seventeen seventies, built for William Cunninghame, one of Glasgow&#x27;s wealthy tobacco merchants. It later served as the Royal Exchange, and then as a library. It reopened as the gallery in nineteen ninety six.</p><p>Take your photo, and then carry on east.</p></div>
+</article><article class="stop" id="s3" data-i="3">
+  <header><p class="when">12:05</p><h3><span class="pin">3</span>George Square and the City Chambers</h3></header>
+  <button class="btn listen" type="button" data-i="3">Listen to this stop</button>
+  <div class="look"><h4>What to look for</h4><ul><li>The City Chambers on the east side, with its towers and arches.</li><li>The statues and the tall column in the middle of the square.</li></ul></div>
+  <div class="say"><p>This is George Square, the civic heart of Glasgow. The grand building on the east side is the City Chambers, designed by William Young and finished in eighteen eighty eight. It was built to show how rich and important Glasgow was, and it does the job. Inside there are marble staircases and a banqueting hall.</p><p>There are free guided tours on weekdays at ten thirty and two thirty, about forty five minutes, with tickets from the front desk. The two thirty tour clashes with your cathedral time, so today the outside is the show.</p><p>The square also holds the city&#x27;s war memorial, the cenotaph, and statues of famous Scots. Queen Street station is just beside you, and it&#x27;s the one you arrived at yesterday.</p></div>
+</article><article class="stop" id="s4" data-i="4">
+  <header><p class="when">12:30</p><h3><span class="pin">4</span>Lunch in the Merchant City</h3></header>
+  <button class="btn listen" type="button" data-i="4">Listen to this stop</button>
+  <div class="look"><h4>What to look for</h4><ul><li>The elegant eighteenth century streets around Ingram Street and Candleriggs.</li><li>The old steeple at Glasgow Cross, a few minutes further east.</li></ul></div>
+  <div class="say"><p>Now it&#x27;s lunchtime, in the Merchant City. This district was laid out in the seventeen hundreds for the merchants who made fortunes importing tobacco from Virginia and Maryland. The trade collapsed when the American War of Independence began, but the wealth had already built a lot of the city centre.</p><p>Today it&#x27;s full of cafes, restaurants and bars, so pick whichever looks right. It&#x27;s about a ten minute walk from George Square along Ingram Street.</p><p>After lunch, walk east to Glasgow Cross, where you&#x27;ll see the old Tolbooth Steeple, a tall tower from the early sixteen hundreds that is all that remains of the town&#x27;s old tolbooth. From there, follow the High Street uphill to the cathedral. Allow about twenty minutes, and aim to arrive by quarter to two.</p></div>
+</article><article class="stop" id="s5" data-i="5">
+  <header><p class="when">13:45</p><h3><span class="pin">5</span>Glasgow Cathedral</h3></header>
+  <button class="btn listen" type="button" data-i="5">Listen to this stop</button>
+  <div class="look"><h4>What to look for</h4><ul><li>The lower church, with the tomb of St Mungo.</li><li>The medieval stonework and the stained glass.</li><li>The organ, which can be loud at times.</li></ul></div>
+  <div class="say"><p>This is Glasgow Cathedral, also called the High Kirk or St Mungo&#x27;s. It&#x27;s the oldest cathedral on the Scottish mainland and the oldest building in Glasgow, dating back to the twelfth century. It&#x27;s also the most complete medieval cathedral on the mainland.</p><p>It stands where St Mungo, also known as Kentigern, is thought to have been buried in the year six hundred and twelve. He&#x27;s Glasgow&#x27;s patron saint. His tomb is in the lower church, which is the part to see if you only have time for one thing.</p><p>Entry is free, and donations go to Historic Environment Scotland. In winter it&#x27;s open from ten to four, Monday to Saturday. Last entry is around three, and the lower church shuts at about quarter past three. It can close for services or for lunch, so don&#x27;t leave it late. An audio guide costs two pounds if you want more detail.</p><p>Give it forty five minutes. Then head out the side, because the next stop is on the hill right beside it.</p></div>
+</article><article class="stop" id="s6" data-i="6">
+  <header><p class="when">14:30</p><h3><span class="pin">6</span>Glasgow Necropolis</h3></header>
+  <button class="btn listen" type="button" data-i="6">Listen to this stop</button>
+  <div class="look"><h4>What to look for</h4><ul><li>The John Knox column at the very top.</li><li>The mausoleums and monuments on the terraces.</li><li>The view back down over the cathedral and the city.</li></ul></div>
+  <div class="say"><p>A footbridge by the cathedral takes you to the Necropolis, a Victorian garden cemetery on a steep hill. It&#x27;s free to walk around.</p><p>It was planned by the Merchants&#x27; House of Glasgow from eighteen thirty one, and it opened in eighteen thirty three. It was modelled on Père Lachaise in Paris, and it was the first garden cemetery in Scotland. About fifty thousand people are buried here, in around three and a half thousand tombs.</p><p>At the top is a sixty foot column, topped by a statue of the reformer John Knox, which went up in eighteen twenty five, before the cemetery existed. Knox isn&#x27;t buried here. The richest families paid for plots near the summit, while the humbler graves sit on the lower terraces. Death had a class system too.</p><p>Climb to the top, and then turn around. You&#x27;ll be looking back over the cathedral roof and across the city. It&#x27;s one of the best views in Glasgow, and the light should be golden by about three.</p><p>The paths are steep and can be slippery. I couldn&#x27;t confirm the closing time, so be down by about half past three, before it gets dark.</p></div>
+</article><article class="stop" id="s7" data-i="7">
+  <header><p class="when">15:30</p><h3><span class="pin">7</span>Back to the hotel</h3></header>
+  <button class="btn listen" type="button" data-i="7">Listen to this stop</button>
+  <div class="look"><h4>What to look for</h4><ul><li>Walk down via George Square and Buchanan Street, or take a taxi.</li></ul></div>
+  <div class="say"><p>That&#x27;s the loop done. The way back to the hotel is about thirty minutes on foot, downhill most of the way. Go down through the Merchant City, or via George Square and Buchanan Street if you want to window shop. A taxi is a good idea if your feet are tired.</p><p>You&#x27;ve got a break before the concert. The train from Central to the Exhibition Centre leaves around half past five. Enjoy the show.</p></div>
+</article>
+</section>
+
+<section class="plain">
+  <h2>Other audio tours</h2>
+  <ul class="flat"><li><a href="castle.html">Edinburgh Castle</a> <span class="fine">Sat 14 Nov, entry 12:30</span></li><li><a href="westend.html">Dean Village to Stockbridge</a> <span class="fine">Sat 14 Nov, about 10:00 to 11:15</span></li><li><a href="gardens.html">Princes Street Gardens</a> <span class="fine">Sat 14 Nov, about 11:30 to 12:15</span></li><li><a href="oldtown.html">Old Town walk</a> <span class="fine">Fri 13 Nov, about 15:35 to 17:15</span></li><li><a href="evening.html">Scott Monument and St Andrew Square</a> <span class="fine">Sat 14 Nov, about 16:30 to 17:15</span></li></ul>
+</section>
+
+<section class="plain">
+  <h2>Sources</h2>
+  <ul class="flat"><li><a href="https://www.historicenvironment.scot/visit-a-place/places/glasgow-cathedral/prices-and-opening-times/" target="_blank" rel="noopener">Historic Environment Scotland: Glasgow Cathedral</a></li><li><a href="https://www.glasgow.gov.uk/en/Visitors/TheLighthouse/" target="_blank" rel="noopener">Glasgow City Council: The Lighthouse</a></li><li><a href="https://en.wikipedia.org/wiki/Glasgow_Necropolis" target="_blank" rel="noopener">Wikipedia: Glasgow Necropolis</a></li><li><a href="https://en.wikipedia.org/wiki/Gallery_of_Modern_Art,_Glasgow" target="_blank" rel="noopener">Wikipedia: Gallery of Modern Art, Glasgow</a></li><li><a href="https://www.glasgow.gov.uk/article/19136/City-Chambers-Tours" target="_blank" rel="noopener">Glasgow City Council: City Chambers tours</a></li></ul>
+  <p class="fine">Walking times, stop locations and the lunch area are my estimates. Opening hours differ between sources, so check the cathedral and Lighthouse on the day.</p>
+</section>
+</main>
+
+<div class="player" id="player" role="region" aria-label="Tour player">
+  <p class="now" id="now" aria-live="polite">Ready</p>
+  <div class="ctl">
+    <button type="button" id="prev" aria-label="Previous stop">Prev</button>
+    <button type="button" id="play" class="main">Play</button>
+    <button type="button" id="next" aria-label="Next stop">Next</button>
+  </div>
+</div>
+
+<script type="application/json" id="data">{"total": 7, "where": "central Glasgow", "file": "glasgow", "stops": [{"i": 0, "n": 0, "id": "s0", "title": "Before you start", "pin": null}, {"i": 1, "n": 1, "id": "s1", "title": "The Lighthouse", "pin": [55.8604, -4.2551]}, {"i": 2, "n": 2, "id": "s2", "title": "Gallery of Modern Art and the Duke of Wellington", "pin": [55.8601, -4.2524]}, {"i": 3, "n": 3, "id": "s3", "title": "George Square and the City Chambers", "pin": [55.8614, -4.25]}, {"i": 4, "n": 4, "id": "s4", "title": "Lunch in the Merchant City", "pin": [55.8588, -4.2437]}, {"i": 5, "n": 5, "id": "s5", "title": "Glasgow Cathedral", "pin": [55.8618, -4.2347]}, {"i": 6, "n": 6, "id": "s6", "title": "Glasgow Necropolis", "pin": [55.8629, -4.2322]}, {"i": 7, "n": 7, "id": "s7", "title": "Back to the hotel", "pin": [55.858203, -4.259565]}]}</script>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="castle.js"></script>
+</body>
+</html>
